@@ -1,0 +1,21 @@
+{
+  "name": "swordfly1979/php-library",
+  "description": "一个自定义php工具库",
+  "type": "library",
+  "authors": [
+    {
+      "name": "swordfly1979",
+      "email": "7115670@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "swordfly1979\\": "src/"
+    },
+    "files": [
+      "src/lib/helper.php"
+    ]
+  }
+}
