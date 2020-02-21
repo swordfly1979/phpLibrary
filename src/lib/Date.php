@@ -42,6 +42,7 @@ class Date
         $tempDate = $startDate;
         $returnData = [];
         $i = 0;
+        dump($i);
         if ($type == 'day') {    // 查询所有日期
             while ($tempDate < $endDate) {
                 $tempDate = strtotime('+' . $i . ' day', $startDate);
