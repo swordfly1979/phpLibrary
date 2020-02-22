@@ -23,7 +23,6 @@ class Date
     static public function DateArr($startDate = '', $endDate = '', $type = '', $returnType = '1')
     {
         $str = 'Y-m-d H:i:s';
-        dump($str);
         if (is_int($startDate) && !(new self())->isTimeStamp($startDate)) {
             return '开始日期格式不正确';
         }
