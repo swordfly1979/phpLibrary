@@ -2,6 +2,7 @@
   "name": "swordfly1979/php-library",
   "description": "一个自定义php工具库",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "swordfly1979",
