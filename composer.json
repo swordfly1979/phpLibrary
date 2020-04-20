@@ -14,9 +14,6 @@
   "autoload": {
     "psr-4": {
       "swordfly1979\\": "src/"
-    },
-    "files": [
-      "src/helper.php"
-    ]
+    }
   }
 }
