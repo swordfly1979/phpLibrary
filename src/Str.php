@@ -67,12 +67,22 @@ class Str
      * @param int $eccurate 是否精确验证
      * @return int
      */
-    public static function is_mobile_no($mobile = '', $accurate = 0)
+    public static function verify_mobile($mobile = '', $accurate = 0)
     {
         $telRegex = "/1\\d{10}/";
         if ($accurate != 0) {
             $telRegex = "/13[0-9]|14[5,7,9]|15[^4]|18[0-9]|17[0,1,3,5,6,7,8]\\d{8}/"; // "[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。 
         }
-        return preg_match_all($telRegex, $mobile, $array);
+        return preg_match($telRegex, $mobile);
+    }
+
+    /**
+     * 是否邮箱格式
+     * @param str $email　要验证的邮箱
+     */
+    public static function verify_email($email = '')
+    {
+        $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/';
+        return preg_match($regex, $email);
     }
 }
