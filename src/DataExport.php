@@ -12,7 +12,7 @@ namespace swordfly1979;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-class ExportExcel
+class DataExport
 {
     /**
      * excel简单导出
@@ -21,7 +21,7 @@ class ExportExcel
      * $param['fileName] 导出文件名 选填
      * $param['title'] 导出的表title 选填
      */
-    public function simple($param)
+    public function excel($param)
     {
         $spreadsheet = new Spreadsheet();
         if (isset($param['title'])) {
