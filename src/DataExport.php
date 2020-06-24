@@ -70,8 +70,12 @@ class DataExport
             } else {
                 foreach ($header as $k => $v) {
                     $custom = $sheet->getCellByColumnAndRow($k + 1, $row);
-                    $_val = empty($v['key']) ? "" : (empty($val[$v['key']]) ? "" : $val[$v['key']]);
-                    if(empty($_val)) continue;
+                    if (empty($v['value'])) {
+                        $_val = empty($v['key']) ? "" : (empty($val[$v['key']]) ? "" : $val[$v['key']]);
+                    } else {
+                        $_val = $v['value'];
+                    }
+                    if (empty($_val)) continue;
                     // Str::dump($_val);
                     if ($v['type']) {
                         $custom->setValueExplicit($_val, $v['type']);
