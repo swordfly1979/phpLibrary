@@ -3,11 +3,11 @@
 ***
 ## DataImport
 数据导入类，依赖phpoffice/phpspreadsheet。使用前先安装：
-`composer require phpoffice/phpspreadsheet`<br/>
+`composer require phpoffice/phpspreadsheet`
 `use swordfly1979\DataImport`
 
 + ### excel() excel导入
-    ```
+    ```php
     $import = new DataImport()
     $list = $import->excel($param)
 
@@ -17,13 +17,13 @@
     ```
 ---
 ## DataExport
-数据导出类 依赖 phpoffice/phpspreadsheet
+数据导出类依赖 phpoffice/phpspreadsheet
 `use swordfly1979\DataExport`
 + ### excel() 导出excel
-    ```
+    ```php
     $export = new DataExport()
     $list = $export->excel($param)
-
+    
     $param['list'] array 需要导出的数据 (必填项)
     $param['header'] array 导出的表头及格式 (选填,不填不导出表头)，如设置表头，导出的数据列以表头为准
     $param['fileName] string 导出文件名 选填 （选填，不填默认 Y-m-d导出数据
@@ -45,7 +45,8 @@
             'nickname' => '王五',
             'mobile' => '15100000000',
             'total' => 554
-        ],    [
+        ],
+        [
             'nickname' => '赵六',
             'mobile' => '13800000000',
             'total' => 74
@@ -71,5 +72,3 @@
         ]
     ]
     ```
-
-
