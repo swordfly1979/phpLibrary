@@ -25,7 +25,7 @@
     $list = $export->excel($param)
 
     $param['list'] array 需要导出的数据 (必填项)
-    $param['header'] array 导出的表头及格式 (选填,不填不导出表头)
+    $param['header'] array 导出的表头及格式 (选填,不填不导出表头)，如设置表头，导出的数据列以表头为准
     $param['fileName] string 导出文件名 选填 （选填，不填默认 Y-m-d导出数据
     $param['title'] string 导出的表title （选填）
     数据示例
@@ -60,24 +60,14 @@
             ‘value'=>’void‘ //此列固定填充值（选填）
         ],
         [
-            'key' => 'nickname',
             'title' => '昵称',
+            'key' => 'nickname',
             'type' => 'str',
         ],
         [
-            'key' => 'je',
-            'title' => '金额',
+            'title' => '昵称2',
             'type' => 'str',
-        ],
-        [
-            'title' => '金额1',
-            'type' => 'str',
-            'value'=>'100'
-        ],
-        [
-            'title' => '金额2',
-            'type' => 'str',
-            'key' =>'nickname'
+            'value' =>'张三'
         ]
     ]
     ```
